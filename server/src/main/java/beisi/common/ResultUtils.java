@@ -1,0 +1,31 @@
+package beisi.common;
+
+
+import beisi.exception.ErrorCode;
+
+public class ResultUtils {
+
+    public static <T> BaseResponse<T> success(T data) {
+        return new BaseResponse<>(ErrorCode.SUCCESS, data);
+    }
+
+    public static <T> BaseResponse<T> success(T data, String description) {
+        return new BaseResponse<>(ErrorCode.SUCCESS, data, description);
+    }
+
+    public static <T> BaseResponse<T> error(int code, String message) {
+        return new BaseResponse<>(code, null, message, "");
+    }
+
+    public static <T> BaseResponse<T> error(int code, String message, String description) {
+        return new BaseResponse<>(code, null, message, description);
+    }
+
+    public static <T> BaseResponse<T> error(ErrorCode errorCode) {
+        return new BaseResponse<>(errorCode.getCode(), null, errorCode.getMessage(), "");
+    }
+
+    public static <T> BaseResponse<T> error(ErrorCode errorCode, String description) {
+        return new BaseResponse<>(errorCode.getCode(), null, errorCode.getMessage(), description);
+    }
+}

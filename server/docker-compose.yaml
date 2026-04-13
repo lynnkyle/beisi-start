@@ -1,0 +1,10 @@
+services:
+  server:
+    build: .
+    image: beisi-server
+    container_name: beisi-server
+    ports:
+      - "8080:8080"
+networks:
+  backend_default:
+    driver: bridge

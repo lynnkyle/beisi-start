@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    image: beisi-web
+    # 容器名
+    container_name: beisi-web
+    # 端口映射：主机80 → 容器80
+    ports:
+      - "80:80"
+    # 重启策略
+    restart: always
+networks:
+  backend_default:
+    driver: bridge

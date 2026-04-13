@@ -2,6 +2,16 @@
 
 全栈开发者的第一个练习
 
+在线地址: http://beisi.linzeyuan.site/
+
+github地址: https://github.com/lynnkyle/beisi-start
+
+用户(提供用户注册):
+
+用户1: 用户名 admin 密码123456
+
+用户2: 用户名 beisi 密码beisi
+
 ### 任务书
 
 - 任务描述

@@ -3,11 +3,10 @@ import {message} from 'ant-design-vue'
 
 const instance = axios.create({
     // baseURL: '',
-    baseURL: 'http://localhost:8080/api',
+    baseURL: '/api',
     timeout: 60000,
     withCredentials: true
 })
-
 instance.interceptors.response.use(
     (response) => {
         const {data} = response
